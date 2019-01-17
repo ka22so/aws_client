@@ -1,0 +1,53 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "client-20190117191124-authRole",
+			"UnauthRoleArn": "arn:aws:iam::537886032710:role/client-20190117191124-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::537886032710:role/client-20190117191124-authRole",
+			"Region": "ap-northeast-1",
+			"DeploymentBucketName": "client-20190117191124-deployment",
+			"UnauthRoleName": "client-20190117191124-unauthRole",
+			"StackName": "client-20190117191124",
+			"StackId": "arn:aws:cloudformation:ap-northeast-1:537886032710:stack/client-20190117191124/3ed5aa10-1a40-11e9-b181-0a8788cf6370"
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/client-20190117191124-deployment/amplify-cfn-templates/hosting/template.json",
+				"logicalId": "hostingS3AndCloudFront"
+			},
+			"lastPushTimeStamp": "2019-01-17T10:15:28.622Z",
+			"output": {
+				"S3BucketSecureURL": "https://client-20190117191220-hostingbucket.s3.amazonaws.com",
+				"WebsiteURL": "http://client-20190117191220-hostingbucket.s3-website-ap-northeast-1.amazonaws.com",
+				"Region": "ap-northeast-1",
+				"HostingBucketName": "client-20190117191220-hostingbucket"
+			},
+			"lastPushDirHash": "D0V+izyf+Ci1gSRxbL9uDdecgaU="
+		}
+	},
+	"auth": {
+		"cognito5919ac29": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/client-20190117191124-deployment/amplify-cfn-templates/auth/cognito5919ac29-cloudformation-template.yml",
+				"logicalId": "authcognito5919ac29"
+			},
+			"lastPushTimeStamp": "2019-01-17T10:15:28.622Z",
+			"output": {
+				"AppClientSecret": "10p2mu0cp8m7uc590i7jfqeconpsa03bc7o4mk7u2d0lqksq7536",
+				"UserPoolId": "ap-northeast-1_ZZzyjYZRy",
+				"AppClientIDWeb": "791ag9v626n94q5m3tqs74qjn8",
+				"AppClientID": "3sddt04n49cm06kahv69g3kja1",
+				"IdentityPoolId": "ap-northeast-1:71220a66-e12e-4ab3-8f6b-c636a9eec35a",
+				"IdentityPoolName": "cognito5919ac29_identitypool_5919ac29",
+				"UserPoolName": "cognito5919ac29_userpool_5919ac29"
+			},
+			"lastPushDirHash": "Zym73VimSxdd8BqShEmfVlfxjJY="
+		}
+	}
+}
